@@ -32,7 +32,8 @@
               }
             ],
             "styles": [
-              "projects/portal/src/styles.scss"
+              "projects/portal/src/styles.scss",
+              "projects/portal/src/styles.theme.scss"
             ],
             "scripts": []
           },

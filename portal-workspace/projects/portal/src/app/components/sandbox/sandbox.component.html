@@ -1,0 +1,134 @@
+<section class="flex flex-col h-full gap-40 mx-auto overflow-auto rounded-lg p-30 bg-surface-0 max-w-1440">
+    <div class="flex flex-col">
+        <h1 class="text-3xl font-bold underline font-display">
+            Hello world!
+        </h1>
+        <p class="text-lg">This is a body text.</p>
+        <p class="">This is a body text.</p>
+        <p class="text-sm">This is a body text.</p>
+    </div>
+
+    <section class="flex items-center gap-20">
+        <p-button label="Small" size="small" />
+        <p-button label="Normal" />
+        <p-button label="Large" size="large" />
+        <p-button variant="outlined" label="Small" size="small" />
+        <p-button variant="outlined" label="Normal" />
+        <p-button variant="outlined" label="Large" size="large" />
+        <button pButton>Hello
+            <span class="text-lg material-symbols-outlined">search</span>
+        </button>
+        <p-button variant="outlined" label="Icon">
+            <span class="text-lg material-symbols-outlined">search</span>
+        </p-button>
+    </section>
+    <div class="flex items-center gap-10">
+        <p-floatlabel variant="in">
+            <input pInputText id="in_label" autocomplete="off" />
+            <label for="in_label">In Label</label>
+        </p-floatlabel>
+        <input pInputText type="text" pSize="small" placeholder="Small" />
+        <input pInputText type="text" placeholder="Normal" />
+        <input pInputText type="text" pSize="large" placeholder="Large" />
+    </div>
+
+    <div class="flex items-center gap-10">
+        <p-checkbox inputId="checkbox1" [(ngModel)]="checked" [binary]="true" />
+        <label for="checkbox1">This is a checkbox</label>
+    </div>
+    <p-slider [(ngModel)]="sliderValue" styleClass="w-56" />
+
+    <div class="flex items-center gap-10">
+        <p-toggleswitch inputId="toggleswitch1" [(ngModel)]="checked" />
+        <label for="toggleswitch1">This is a switch</label>
+    </div>
+
+    <div class="flex flex-wrap gap-20">
+        <div class="flex items-center gap-10">
+            <p-radiobutton name="pizza" value="Cheese" [(ngModel)]="ingredient" inputId="ingredient1" />
+            <label for="ingredient1" class="ml-2">Cheese</label>
+        </div>
+
+        <div class="flex items-center gap-10">
+            <p-radiobutton name="pizza" value="Mushroom" [(ngModel)]="ingredient" inputId="ingredient2" />
+            <label for="ingredient2" class="ml-2">Mushroom</label>
+        </div>
+
+        <div class="flex items-center gap-10">
+            <p-radiobutton name="pizza" value="Pepper" [(ngModel)]="ingredient" inputId="ingredient3" />
+            <label for="ingredient3" class="ml-2">Pepper</label>
+        </div>
+
+        <div class="flex items-center gap-10">
+            <p-radiobutton name="pizza" value="Onion" [(ngModel)]="ingredient" inputId="ingredient4" />
+            <label for="ingredient4" class="ml-2">Onion</label>
+        </div>
+
+    </div>
+
+    <div class="flex items-center gap-10">
+        <p-select [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" placeholder="Select a City"
+            class="w-300" />
+        <p-multiselect [options]="cities" [(ngModel)]="selectedCities" optionLabel="name" placeholder="Select Cities"
+            [maxSelectedLabels]="3" class="w-300" />
+    </div>
+
+    <p-tabs value="0">
+        <p-tablist>
+            <p-tab value="0">Header I</p-tab>
+            <p-tab value="1">Header II</p-tab>
+            <p-tab value="2">Header III</p-tab>
+        </p-tablist>
+        <p-tabpanels>
+            <p-tabpanel value="0">
+                <p class="m-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                    eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit
+                    anim id est laborum.
+                </p>
+            </p-tabpanel>
+            <p-tabpanel value="1">
+                <p class="m-0">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem
+                    aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                    explicabo.
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                    magni
+                    dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam
+                    eius
+                    modi.
+                </p>
+            </p-tabpanel>
+            <p-tabpanel value="2">
+                <p class="m-0">
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                    deleniti
+                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
+                    similique
+                    sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
+                    rerum
+                    facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
+                    nihil
+                    impedit quo minus.
+                </p>
+            </p-tabpanel>
+        </p-tabpanels>
+    </p-tabs>
+    <section class="w-full h-640">
+        <div class="flex items-center gap-10">
+            <p-button label="Toggle Drawer" (click)="toggleDrawer()" />
+            <p-button label="Show Toast" (click)="showToast()" />
+            <p-button label="Show Dialog" (click)="showDialog()" />
+        </div>
+        <p-drawer #drawerRef [(visible)]="showDrawer"></p-drawer>
+        <p-toast />
+        <p-confirmDialog></p-confirmDialog>
+    </section>
+</section>

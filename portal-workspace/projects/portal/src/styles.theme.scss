@@ -1,0 +1,29 @@
+@import "primeicons/primeicons.css";
+
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+button {
+  @apply font-semibold;
+}
+
+.p-inputtext {
+  font-size: var(--p-inputtext-sm-font-size);
+}
+
+.p-button {
+  font-size: var(--p-button-sm-font-size);
+}
+
+
+.material-symbols-outlined {
+  @apply text-lg;
+}

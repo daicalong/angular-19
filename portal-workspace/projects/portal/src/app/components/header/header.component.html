@@ -1,0 +1,13 @@
+<section class="flex items-center w-full py-10 text-white px-30 bg-surface-900">
+    <nav class="flex items-center gap-10">
+        @for (item of nav; track $index) {
+        <a [routerLink]="item.path"
+            class="p-10 text-sm font-semibold tracking-widest transition duration-200 rounded-sm hover:bg-surface-950"
+            routerLinkActive="bg-surface-950 text-primary-400">{{item.title}}</a>
+        }
+    </nav>
+    <div class="flex items-center gap-5 ml-auto">
+        <p-toggleSwitch inputId="themeSwitch" [(ngModel)]="checked"></p-toggleSwitch>
+        <label for="themeSwitch">Change theme</label>
+    </div>
+</section>

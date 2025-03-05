@@ -1,1 +1,7 @@
-<router-outlet />
+<section class="relative flex flex-col h-full bg-surface-100">
+    <span class="absolute inset-0 z-0 bg-surface-900 h-180"></span>
+    <app-header class="z-10 block"></app-header>
+    <section class="z-10 flex flex-col h-full overflow-auto p-30">
+        <router-outlet />
+    </section>
+</section>
