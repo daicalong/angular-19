@@ -17,6 +17,7 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { DatePickerModule } from 'primeng/datepicker';
 import { InputOtpModule } from 'primeng/inputotp';
 import { ColorPickerModule } from 'primeng/colorpicker';
+import { EditorModule } from 'primeng/editor';
 @Component({
   selector: 'app-sandbox',
   imports: [
@@ -36,7 +37,8 @@ import { ColorPickerModule } from 'primeng/colorpicker';
     ConfirmDialogModule,
     DatePickerModule,
     InputOtpModule,
-    ColorPickerModule
+    ColorPickerModule,
+    EditorModule
   ],
   providers: [
     MessageService,
@@ -67,6 +69,7 @@ export class SandboxComponent {
   showDrawer = false;
   date = new Date();
   color?: string = '#2c0c94';
+  editorValue?: string = '<p>Drawer component uses complementary role by default, since any attribute is passed to the root element aria role can be changed depending on your use case and additional attributes like aria-labelledby can be added. In addition aria-modal is added since focus is kept within the drawer when opened.</p>';
 
   toggleDrawer(): void {
     this.showDrawer = !this.showDrawer;

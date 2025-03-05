@@ -44,7 +44,7 @@ export const PortalTheme = definePreset(Aura, {
                 paddingY: '0.2rem'
             },
             lg: {
-                fontSize: '{fontSize.base}',
+                fontSize: '{fontSize.lg}',
                 paddingX: '2rem',
                 paddingY: '1.5rem'
             },
@@ -81,11 +81,11 @@ export const PortalTheme = definePreset(Aura, {
         },
         navigation: {
             list: {
-                padding: '0.25rem 0.25rem',
-                gap: '2px'
+                padding: '1rem',
+                gap: '0.5rem'
             },
             item: {
-                padding: '0.5rem 1rem',
+                padding: '0.6rem 1rem',
                 borderRadius: '{border.radius.sm}',
                 gap: '0.5rem'
             },
@@ -94,16 +94,16 @@ export const PortalTheme = definePreset(Aura, {
                 fontWeight: '600'
             },
             submenuIcon: {
-                size: '1.8rem'
+                size: '{fontSize.lg}'
             }
         },
         overlay: {
             select: {
-                borderRadius: '{border.radius.lg}',
+                borderRadius: '{border.radius.md}',
                 shadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)'
             },
             popover: {
-                borderRadius: '{border.radius.lg}',
+                borderRadius: '{border.radius.md}',
                 padding: '1rem',
                 shadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)'
             },
@@ -191,24 +191,24 @@ export const PortalTheme = definePreset(Aura, {
                 content: {
                     background: "{surface.0}",
                     hoverBackground: "{surface.100}",
-                    borderColor: "{surface.200}",
+                    borderColor: "{surface.300}",
                     color: "{text.color}",
                     hoverColor: "{text.hover.color}"
                 },
                 overlay: {
                     select: {
                         background: "{surface.0}",
-                        borderColor: "{surface.200}",
+                        borderColor: "{surface.300}",
                         color: "{text.color}"
                     },
                     popover: {
                         background: "{surface.0}",
-                        borderColor: "{surface.200}",
+                        borderColor: "{surface.300}",
                         color: "{text.color}"
                     },
                     modal: {
                         background: "{surface.0}",
-                        borderColor: "{surface.200}",
+                        borderColor: "{surface.300}",
                         color: "{text.color}"
                     }
                 },
@@ -332,14 +332,16 @@ export const PortalTheme = definePreset(Aura, {
             icon: {
                 size: '{fontSize.lg}',
             },
+            borderColor: '{surface.400}',
         },
         toggleswitch: {
             width: '3.6rem',
             height: '2rem',
             gap: '.4rem',
             handle: {
-                size: '1.2rem'
-            }
+                size: '1.2rem',
+            },
+            borderRadius: '{borderRadius.full}',
         },
         radiobutton: {
             width: '2.2rem',
@@ -347,6 +349,7 @@ export const PortalTheme = definePreset(Aura, {
             icon: {
                 size: '{fontSize.sm}',
             },
+            borderColor: '{surface.400}',
         },
         multiselect: {
             list: {

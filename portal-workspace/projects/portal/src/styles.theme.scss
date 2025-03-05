@@ -24,7 +24,9 @@ button {
 }
 
 /* PrimeNG Customize */
-
+:root {
+  --p-toggleswitch-background: var(--p-surface-400);
+}
 /* Input */
 .p-inputtext {
   &:not(.p-inputtext-lg):not(.p-inputtext-sm) {
@@ -36,7 +38,7 @@ button {
 .p-inputotp-input {
   @apply font-medium;
   &:not(.p-inputtext-lg):not(.p-inputtext-sm) {
-    @apply w-[length:--p-inputotp-input-width];
+    @apply w-[--p-inputotp-input-width];
   }
 }
 
@@ -52,8 +54,9 @@ button {
   @apply text-sm;
 }
 
-/* Checkbox */
-.p-checkbox-box {
+/* Checkbox & radio */
+.p-checkbox-box,
+.p-radiobutton-box {
   @apply border-2;
 }
 
