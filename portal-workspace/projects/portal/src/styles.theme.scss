@@ -11,16 +11,28 @@
   @tailwind utilities;
 }
 
+html {
+  @apply w-full h-full text-normalize font-body font-normal;
+}
+
+body {
+  @apply w-full h-full text-base;
+}
+
 button {
   @apply font-semibold;
 }
 
+/* PrimeNG Customize */
+
+/* Input */
 .p-inputtext {
   &:not(.p-inputtext-lg):not(.p-inputtext-sm) {
     @apply text-base;
   }
 }
 
+/* OTP Input */
 .p-inputotp-input {
   @apply font-medium;
   &:not(.p-inputtext-lg):not(.p-inputtext-sm) {
@@ -28,20 +40,24 @@ button {
   }
 }
 
+/* Button */
 .p-button {
   &:not(.p-button-lg):not(.p-button-sm) {
     @apply text-base;
   }
 }
 
+/* Datepicker */
 .p-datepicker-day-view {
   @apply text-sm;
 }
 
+/* Checkbox */
 .p-checkbox-box {
   @apply border-2;
 }
 
+/* Override mat icon default size */
 .material-symbols-outlined {
   @apply text-lg;
 }
