@@ -351,6 +351,13 @@ export const PortalTheme = definePreset(Aura, {
             },
             borderColor: '{surface.400}',
         },
+        slider: {
+            handle: {
+                height: '2.2rem',
+                width: '2.2rem',
+                background: '{primary.500}',
+            }
+        },
         multiselect: {
             list: {
                 header: {
