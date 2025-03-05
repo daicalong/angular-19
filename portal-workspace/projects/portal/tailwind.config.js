@@ -7,7 +7,7 @@ import PrimeUI from 'tailwindcss-primeui';
 module.exports = {
   darkMode: ['selector', '[class~="portal-dark-theme"]'],
   content: [
-    "./projects/portal/src/**/*.{html, js, ts}"
+    "./src/**/*.{html, js, ts}"
   ],
   theme: {
     extend: {

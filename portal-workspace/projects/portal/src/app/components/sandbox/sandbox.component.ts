@@ -14,7 +14,9 @@ import { DrawerModule } from 'primeng/drawer';
 import { ToastModule } from 'primeng/toast';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
-
+import { DatePickerModule } from 'primeng/datepicker';
+import { InputOtpModule } from 'primeng/inputotp';
+import { ColorPickerModule } from 'primeng/colorpicker';
 @Component({
   selector: 'app-sandbox',
   imports: [
@@ -31,7 +33,10 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     MultiSelectModule,
     DrawerModule,
     ToastModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    DatePickerModule,
+    InputOtpModule,
+    ColorPickerModule
   ],
   providers: [
     MessageService,
@@ -44,9 +49,9 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
 export class SandboxComponent {
   constructor(
     private messageService: MessageService,
-    private confirmationService : ConfirmationService,
+    private confirmationService: ConfirmationService,
   ) { }
-
+  otpValue = 123456;
   checked = true;
   sliderValue = 20;
   ingredient = 'Mushroom';
@@ -60,6 +65,8 @@ export class SandboxComponent {
   selectedCities = [];
   selectedCity = null;
   showDrawer = false;
+  date = new Date();
+  color?: string = '#2c0c94';
 
   toggleDrawer(): void {
     this.showDrawer = !this.showDrawer;
@@ -83,24 +90,24 @@ export class SandboxComponent {
       closeOnEscape: true,
       icon: 'pi pi-exclamation-triangle',
       rejectButtonProps: {
-          label: 'Cancel',
-          severity: 'secondary',
-          outlined: true,
+        label: 'Cancel',
+        severity: 'secondary',
+        outlined: true,
       },
       acceptButtonProps: {
-          label: 'Save',
+        label: 'Save',
       },
       accept: () => {
-          this.messageService.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted' });
+        this.messageService.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted' });
       },
       reject: () => {
-          this.messageService.add({
-              severity: 'error',
-              summary: 'Rejected',
-              detail: 'You have rejected',
-              life: 3000,
-          });
+        this.messageService.add({
+          severity: 'error',
+          summary: 'Rejected',
+          detail: 'You have rejected',
+          life: 3000,
+        });
       },
-  });
+    });
   }
 }

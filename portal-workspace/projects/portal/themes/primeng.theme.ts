@@ -26,9 +26,9 @@ export const PortalTheme = definePreset(Aura, {
     semantic: {
         transitionDuration: '0.2s',
         focusRing: {
-            width: '1px',
+            width: '2px',
             style: 'solid',
-            color: '{primary.color}',
+            color: '{primary.300}',
             offset: '2px',
             shadow: 'none'
         },
@@ -39,7 +39,7 @@ export const PortalTheme = definePreset(Aura, {
             paddingX: '1rem',
             paddingY: '0.55rem',
             sm: {
-                fontSize: '{fontSize.base}',
+                fontSize: '{fontSize.sm}',
                 paddingX: '1rem',
                 paddingY: '0.2rem'
             },
@@ -99,16 +99,16 @@ export const PortalTheme = definePreset(Aura, {
         },
         overlay: {
             select: {
-                borderRadius: '{border.radius.md}',
+                borderRadius: '{border.radius.lg}',
                 shadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)'
             },
             popover: {
-                borderRadius: '{border.radius.md}',
+                borderRadius: '{border.radius.lg}',
                 padding: '1rem',
                 shadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)'
             },
             modal: {
-                borderRadius: '{border.radius.xl}',
+                borderRadius: '{border.radius.lg}',
                 padding: '1.25rem',
                 shadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)'
             },
@@ -277,7 +277,7 @@ export const PortalTheme = definePreset(Aura, {
         button: {
             borderRadius: '{borderRadius.sm}',
             label: {
-                fontWeight: '700',
+                fontWeight: '600',
             }
         },
         dialog: {
@@ -295,8 +295,35 @@ export const PortalTheme = definePreset(Aura, {
                 fontSize: '{fontSize.lg}',
             }
         },
+        datepicker: {
+            panel: {
+                padding: '1rem',
+                borderRadius: '{borderRadius.md}',
+            },
+            week: {
+                day: {
+                    padding: '.3rem'
+                }
+            },
+            date: {
+                padding: '.3rem',
+                width: '2.4rem',
+                height: '2.4rem',
+            }
+        },
         inputtext: {
             borderRadius: '{borderRadius.sm}',
+        },
+        inputotp: {
+            input: {
+                width: '3.4rem',
+                sm: {
+                    width: '3rem',
+                },
+                lg: {
+                    width: '5.4rem',
+                }
+            },
         },
         checkbox: {
             borderRadius: '{borderRadius.sm}',
@@ -309,8 +336,9 @@ export const PortalTheme = definePreset(Aura, {
         toggleswitch: {
             width: '3.6rem',
             height: '2rem',
+            gap: '.4rem',
             handle: {
-                size: '1.3rem'
+                size: '1.2rem'
             }
         },
         radiobutton: {

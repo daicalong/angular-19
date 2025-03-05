@@ -16,13 +16,31 @@ button {
 }
 
 .p-inputtext {
-  font-size: var(--p-inputtext-sm-font-size);
+  &:not(.p-inputtext-lg):not(.p-inputtext-sm) {
+    @apply text-base;
+  }
+}
+
+.p-inputotp-input {
+  @apply font-medium;
+  &:not(.p-inputtext-lg):not(.p-inputtext-sm) {
+    @apply w-[length:--p-inputotp-input-width];
+  }
 }
 
 .p-button {
-  font-size: var(--p-button-sm-font-size);
+  &:not(.p-button-lg):not(.p-button-sm) {
+    @apply text-base;
+  }
 }
 
+.p-datepicker-day-view {
+  @apply text-sm;
+}
+
+.p-checkbox-box {
+  @apply border-2;
+}
 
 .material-symbols-outlined {
   @apply text-lg;

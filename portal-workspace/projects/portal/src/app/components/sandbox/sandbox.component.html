@@ -22,7 +22,7 @@
             <span class="text-lg material-symbols-outlined">search</span>
         </p-button>
     </section>
-    <div class="flex items-center gap-10">
+    <div class="flex flex-wrap items-center gap-10">
         <p-floatlabel variant="in">
             <input pInputText id="in_label" autocomplete="off" />
             <label for="in_label">In Label</label>
@@ -30,6 +30,20 @@
         <input pInputText type="text" pSize="small" placeholder="Small" />
         <input pInputText type="text" placeholder="Normal" />
         <input pInputText type="text" pSize="large" placeholder="Large" />
+        <p-datepicker [(ngModel)]="date" placeholder="Pick a date" />
+        <div class="flex flex-col gap-10">
+            <label for="otp">MFA Code</label>
+            <p-inputotp id="otp" [(ngModel)]="otpValue" [integerOnly]="true" [length]="6" />
+            <p-inputotp id="otp" [(ngModel)]="otpValue" [integerOnly]="true" [length]="6" size="small"/>
+            <p-inputotp id="otp" [(ngModel)]="otpValue" [integerOnly]="true" [length]="6" size="large"/>
+        </div>
+        <div class="flex flex-col gap-10">
+            <label for="color">Color Picker</label>
+            <div class="flex items-center gap-10">
+                <p-colorpicker [(ngModel)]="color" />
+                <input pInputText [(ngModel)]="color" id="color" type="text" placeholder="Color picker" />
+            </div>
+        </div>
     </div>
 
     <div class="flex items-center gap-10">
