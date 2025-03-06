@@ -1,10 +1,10 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from 'tailwindcss'
 var spacing = require('./tailwind-config/const.spacing');
 var typography = require('./tailwind-config/const.typography');
 
 import PrimeUI from 'tailwindcss-primeui';
 
-module.exports = {
+export default {
   darkMode: ['selector', '[class~="portal-dark-theme"]'],
   content: [
     "./src/**/*.{html, js, ts}"
@@ -36,5 +36,5 @@ module.exports = {
   plugins: [
     PrimeUI
   ]
-}
+} satisfies Config;
 
