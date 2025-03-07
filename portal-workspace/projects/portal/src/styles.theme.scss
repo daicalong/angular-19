@@ -1,32 +1,4 @@
-@import "primeicons/primeicons.css";
-
-@layer tailwind-base, primeng, tailwind-utilities;
-
-@layer tailwind-base {
-  @tailwind base;
-}
-
-@layer tailwind-utilities {
-  @tailwind components;
-  @tailwind utilities;
-}
-
-html {
-  @apply w-full h-full text-normalize font-body font-normal;
-}
-
-body {
-  @apply w-full h-full text-base;
-}
-
-button {
-  @apply font-semibold;
-}
-
 /* PrimeNG Customize */
-:root {
-  --p-toggleswitch-background: var(--p-surface-400);
-}
 /* Input */
 .p-inputtext {
   &:not(.p-inputtext-lg):not(.p-inputtext-sm) {

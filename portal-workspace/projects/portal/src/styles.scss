@@ -1,0 +1,23 @@
+/* @config "../themes/tailwind.config.ts"; */
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+html {
+  @apply w-full h-full text-normalize font-body font-normal;
+}
+
+body {
+  @apply w-full h-full text-base;
+}
+
+button {
+  @apply font-semibold;
+}

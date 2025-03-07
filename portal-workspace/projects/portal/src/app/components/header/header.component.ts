@@ -26,6 +26,10 @@ export class HeaderComponent {
       path: 'home',
     },
     {
+      title: 'Planning Center',
+      path: 'planning-center',
+    },
+    {
       title: 'Sandbox',
       path: 'sandbox',
     },

@@ -1,121 +1,20 @@
 import { definePreset } from "@primeng/themes";
 import Aura from '@primeng/themes/aura';
+import { colors } from "./theme.colors";
+import { typography } from "./theme.typography";
+import { borderRadius } from "./theme.border";
 
+const primitive = {
+    borderRadius: borderRadius,
+    fontSize: typography.fontSize,
+    ...colors,
+};
+/**
+ * All primitive tokens (border radius, colors, spacing) are extracted to consistently power both TailwindCSS & PrimeNG
+ */
 export const PortalTheme = definePreset(Aura, {
-    primitive: {
-        borderRadius: {
-            none: '0',
-            xs: '2px',
-            sm: '4px',
-            md: '8px',
-            lg: '16px',
-            xl: '24px',
-            full: '9999px'
-        },
-        fontSize: {
-            'xs': '1rem',
-            'sm': '1.2rem',
-            'base': '1.4rem',
-            'lg': '1.6rem',
-            'xl': '2rem',
-            '2xl': '2.4rem',
-            '3xl': '3.6rem',
-            '4xl': '4.8rem',
-        },
-    },
+    primitive: primitive,
     semantic: {
-        transitionDuration: '0.2s',
-        focusRing: {
-            width: '2px',
-            style: 'solid',
-            color: '{primary.300}',
-            offset: '2px',
-            shadow: 'none'
-        },
-        disabledOpacity: '0.5',
-        iconSize: '{fontSize.lg}',
-        anchorGutter: '2px',
-        formField: {
-            paddingX: '1rem',
-            paddingY: '0.55rem',
-            sm: {
-                fontSize: '{fontSize.sm}',
-                paddingX: '1rem',
-                paddingY: '0.2rem'
-            },
-            lg: {
-                fontSize: '{fontSize.lg}',
-                paddingX: '2rem',
-                paddingY: '1.5rem'
-            },
-            borderRadius: '{border.radius.sm}',
-            focusRing: {
-                width: '0',
-                style: 'none',
-                color: 'transparent',
-                offset: '0',
-                shadow: 'none'
-            },
-            transitionDuration: '{transition.duration}'
-        },
-        list: {
-            padding: '0rem',
-            gap: '2px',
-            header: {
-                padding: '0rem'
-            },
-            option: {
-                padding: '0.6rem 1rem',
-                borderRadius: '{border.radius.sm}'
-            },
-            optionGroup: {
-                padding: '0.8rem 1rem',
-                fontWeight: '600'
-            }
-        },
-        content: {
-            borderRadius: '{border.radius.sm}'
-        },
-        mask: {
-            transitionDuration: '0.15s'
-        },
-        navigation: {
-            list: {
-                padding: '1rem',
-                gap: '0.5rem'
-            },
-            item: {
-                padding: '0.6rem 1rem',
-                borderRadius: '{border.radius.sm}',
-                gap: '0.5rem'
-            },
-            submenuLabel: {
-                padding: '0.5rem 1rem',
-                fontWeight: '600'
-            },
-            submenuIcon: {
-                size: '{fontSize.lg}'
-            }
-        },
-        overlay: {
-            select: {
-                borderRadius: '{border.radius.md}',
-                shadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)'
-            },
-            popover: {
-                borderRadius: '{border.radius.md}',
-                padding: '1rem',
-                shadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)'
-            },
-            modal: {
-                borderRadius: '{border.radius.lg}',
-                padding: '1.25rem',
-                shadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)'
-            },
-            navigation: {
-                shadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)'
-            }
-        },
         primary: {
             50: '{blue.50}',
             100: '{blue.100}',
@@ -271,13 +170,117 @@ export const PortalTheme = definePreset(Aura, {
                     950: '{slate.950}'
                 }
             }
-        }
+        },
+        transitionDuration: '0.15s',
+        focusRing: {
+            width: '2px',
+            style: 'solid',
+            color: '{primary.300}',
+            offset: '2px',
+            shadow: 'none'
+        },
+        disabledOpacity: '0.5',
+        iconSize: '{fontSize.lg}',
+        anchorGutter: '2px',
+        formField: {
+            paddingX: '1rem',
+            paddingY: '0.55rem',
+            sm: {
+                fontSize: '{fontSize.sm}',
+                paddingX: '1rem',
+                paddingY: '0.2rem'
+            },
+            lg: {
+                fontSize: '{fontSize.lg}',
+                paddingX: '2rem',
+                paddingY: '1.5rem'
+            },
+            borderRadius: '{border.radius.sm}',
+            focusRing: {
+                width: '0',
+                style: 'none',
+                color: 'transparent',
+                offset: '0',
+                shadow: 'none'
+            },
+            transitionDuration: '{transition.duration}'
+        },
+        list: {
+            padding: '0rem',
+            gap: '2px',
+            header: {
+                padding: '0rem'
+            },
+            option: {
+                padding: '0.6rem 1rem',
+                borderRadius: '{border.radius.sm}'
+            },
+            optionGroup: {
+                padding: '0.8rem 1rem',
+                fontWeight: '600'
+            }
+        },
+        content: {
+            borderRadius: '{border.radius.sm}'
+        },
+        mask: {
+            transitionDuration: '0.15s'
+        },
+        navigation: {
+            list: {
+                padding: '1rem',
+                gap: '0.5rem'
+            },
+            item: {
+                padding: '0.6rem 1rem',
+                borderRadius: '{border.radius.sm}',
+                gap: '0.5rem'
+            },
+            submenuLabel: {
+                padding: '0.5rem 1rem',
+                fontWeight: '600'
+            },
+            submenuIcon: {
+                size: '{fontSize.lg}'
+            }
+        },
+        overlay: {
+            select: {
+                borderRadius: '{border.radius.md}',
+                shadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)'
+            },
+            popover: {
+                borderRadius: '{border.radius.md}',
+                padding: '1rem',
+                shadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)'
+            },
+            modal: {
+                borderRadius: '{border.radius.lg}',
+                padding: '1.25rem',
+                shadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)'
+            },
+            navigation: {
+                shadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)'
+            }
+        },
     },
     components: {
         button: {
             borderRadius: '{borderRadius.sm}',
             label: {
                 fontWeight: '600',
+            },
+            colorScheme: {
+                light: {
+                    outlined: {
+                        primary: {
+                            borderColor: '{primary.200}',
+                        },
+                        secondary: {
+                            borderColor: '{surface.200}',
+                        }
+                    }
+                }
             }
         },
         dialog: {
@@ -332,7 +335,11 @@ export const PortalTheme = definePreset(Aura, {
             icon: {
                 size: '{fontSize.lg}',
             },
-            borderColor: '{surface.400}',
+            colorScheme: {
+                light: {
+                    borderColor: '{surface.400}',
+                }
+            }
         },
         toggleswitch: {
             width: '3.6rem',
@@ -342,6 +349,17 @@ export const PortalTheme = definePreset(Aura, {
                 size: '1.2rem',
             },
             borderRadius: '{borderRadius.full}',
+            colorScheme: {
+                light: {
+                    root: {
+                        background: '{surface.500}'
+                    },
+                    handle: {
+                        checkedBackground: '{primary.50}',
+                        checkedHoverBackground: '{primary.100}'
+                    }
+                }
+            }
         },
         radiobutton: {
             width: '2.2rem',
@@ -349,13 +367,26 @@ export const PortalTheme = definePreset(Aura, {
             icon: {
                 size: '{fontSize.sm}',
             },
-            borderColor: '{surface.400}',
+            colorScheme: {
+                light: {
+                    borderColor: '{surface.400}',
+                }
+            }
         },
         slider: {
             handle: {
                 height: '2.2rem',
                 width: '2.2rem',
-                background: '{primary.500}',
+            },
+            colorScheme: {
+                light: {
+                    range: {
+                        background: '{primary.400}',
+                    },
+                    handle: {
+                        background: '{primary.500}',
+                    }
+                }
             }
         },
         multiselect: {
@@ -388,3 +419,4 @@ export const PortalTheme = definePreset(Aura, {
         }
     }
 });
+
