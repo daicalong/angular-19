@@ -3,7 +3,7 @@ import { RecursiveKeyValuePair, ResolvableTo } from "tailwindcss/types/config";
 /**
  * Main color palette. This will power both TailwndCSS utility classes as well as PrimeNG's theme settings & design tokens
  */
-export const colors: Colors | ResolvableTo<RecursiveKeyValuePair<string, string>> | undefined = {
+export const colors: Colors | ResolvableTo<RecursiveKeyValuePair<string, string>> = {
     slate: {
         50: "#f8fafc",
         100: "#f1f5f9",
@@ -159,6 +159,110 @@ export const colors: Colors | ResolvableTo<RecursiveKeyValuePair<string, string>
         800: "#005f78",
         900: "#104e64",
         950: "#053345"
+    },
+    sky: {
+        50: "#f0f9ff",
+        100: "#dff2fe",
+        200: "#b8e6fe",
+        300: "#74d4ff",
+        400: "#00bcff",
+        500: "#00a6f4",
+        600: "#0084d1",
+        700: "#0069a8",
+        800: "#00598a",
+        900: "#024a70",
+        950: "#052f4a"
+    },
+    blue: {
+        50: "#eff6ff",
+        100: "#dbeafe",
+        200: "#bedbff",
+        300: "#8ec5ff",
+        400: "#51a2ff",
+        500: "#2b7fff",
+        600: "#155dfc",
+        700: "#1447e6",
+        800: "#193cb8",
+        900: "#1c398e",
+        950: "#162456"
+    },
+    indigo: {
+        50: "#eef2ff",
+        100: "#e0e7ff",
+        200: "#c6d2ff",
+        300: "#a3b3ff",
+        400: "#7c86ff",
+        500: "#615fff",
+        600: "#4f39f6",
+        700: "#432dd7",
+        800: "#372aac",
+        900: "#312c85",
+        950: "#1e1a4d"
+    },
+    violet: {
+        50: "#f5f3ff",
+        100: "#ede9fe",
+        200: "#ddd6ff",
+        300: "#c4b4ff",
+        400: "#a684ff",
+        500: "#8e51ff",
+        600: "#7f22fe",
+        700: "#7008e7",
+        800: "#5d0ec0",
+        900: "#4d179a",
+        950: "#2f0d68"
+    },
+    purple: {
+        50: "#faf5ff",
+        100: "#f3e8ff",
+        200: "#e9d4ff",
+        300: "#dab2ff",
+        400: "#c27aff",
+        500: "#ad46ff",
+        600: "#9810fa",
+        700: "#8200db",
+        800: "#6e11b0",
+        900: "#59168b",
+        950: "#3c0366"
+    },
+    fuchsia: {
+        50: "#fdf4ff",
+        100: "#fae8ff",
+        200: "#f6cfff",
+        300: "#f4a8ff",
+        400: "#ed6aff",
+        500: "#e12afb",
+        600: "#c800de",
+        700: "#a800b7",
+        800: "#8a0194",
+        900: "#721378",
+        950: "#4b004f"
+    },
+    pink: {
+        50: "#fdf2f8",
+        100: "#fce7f3",
+        200: "#fccee8",
+        300: "#fda5d5",
+        400: "#fb64b6",
+        500: "#f6339a",
+        600: "#e60076",
+        700: "#c6005c",
+        800: "#a3004c",
+        900: "#861043",
+        950: "#510424"
+    },
+    rose: {
+        50: "#fff1f2",
+        100: "#ffe4e6",
+        200: "#ffccd3",
+        300: "#ffa1ad",
+        400: "#ff637e",
+        500: "#ff2056",
+        600: "#ec003f",
+        700: "#c70036",
+        800: "#a50036",
+        900: "#8b0836",
+        950: "#4d0218"
     }
 };
 
@@ -189,4 +293,12 @@ export interface Colors {
     lime: ColorShades;
     green: ColorShades;
     cyan: ColorShades;
+    sky: ColorShades;
+    blue: ColorShades;
+    indigo: ColorShades;
+    violet: ColorShades;
+    purple: ColorShades;
+    fuchsia: ColorShades;
+    pink: ColorShades;
+    rose: ColorShades;
 }
